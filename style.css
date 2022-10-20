@@ -1,0 +1,261 @@
+/* TODO(you): Write the CSS to finish the assignment! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Proxima Nova', 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    color: #222222;
+    width: 700px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#course-name {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ee3322;
+}
+
+.header-stack-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stack-circle {
+    background-color: #ffee00;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 100%;
+    transform: rotate(-30deg);
+}
+
+/* ARTICLE */
+/* QUIZ NAME */
+#quiz-name {
+    background-image: url('images/background.jpg');
+    height: 425px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quiz-name h1 {
+    max-width: 75%;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Pangolin', 'Trebuchet MS', cursive;
+    font-size: 60px;
+    color: black;
+    padding: 10px;
+}
+
+/* BOX START */
+.box-container {
+    text-align: center;
+    padding: 18px 0;
+    background-color: #f1f1f1;
+    border: 1px solid #dcdcdc;
+}
+
+#box-start {
+    margin-top: 18px;
+}
+
+#box-start p {
+    padding: 18px 0;
+}
+
+.box-color-blue {
+    border: none;
+    padding: 18px 18px;
+    margin-top: 18px;
+    color: white;
+    background-color: #2196f3;
+    cursor: pointer;
+}
+
+.box-color-blue:hover {
+    background-color: #0d8bf2;
+}   
+
+/* BOX SUBMIT */
+#btn-submit {
+    border: none;
+    padding: 18px 18px;
+    color: white;
+    background-color: #4caf50;
+    cursor: pointer;
+}
+
+#btn-submit:hover {
+    background-color: #46a049;
+}
+
+/* BOX RESULT */
+#box-result h3{
+    padding: 18px 0;
+}
+
+#box-result p {
+    padding: 18px 0;
+}
+
+
+/* INTRODUCTION */
+/* 1.AUTHOR */
+#author {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* 2.INTRODUCTION */
+#introduction {
+    padding: 18px 0;  
+}
+
+#introduction h2 {
+    padding-bottom: 18px;
+}
+
+#introduction p {
+    padding-bottom: 18px;
+}
+
+/* 3 POPUP */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+    background-color: #f1f1f1;
+    border: 3px solid #dcdcdc;
+    text-align: center;
+}
+
+#popup h1 {
+    margin-top: 8%;
+    height: 50%;
+}
+
+.popup-button {
+    height: 50%;  
+}
+
+.popup-button .box-color-blue {
+    margin-top: 0;
+    cursor: pointer;
+}
+
+/* ATTEMPT QUIZ */
+.wrapper-question {
+    padding-bottom: 30px;
+}
+
+.question-text {
+    padding: 30px 0;
+}
+
+.attempt-option, .review-option {
+    display: flex;
+    padding: 15px 15px;
+    background-color: #f1f1f1;
+    margin-bottom: 1px;
+}
+
+.attempt-option input, .review-option input{
+    margin-right: 15px;
+}
+
+.attempt-question-container, .review-question-container {
+    padding-top: 30px;
+}
+
+/* ADDITIONAL CSS */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.option-selected {
+    background-color: #ddd;
+}
+
+/* REVIEW QUIZ */
+.correct-answer {
+    position: relative;
+    background-color: #d4edda;
+}
+
+.correct-answer::after {
+    position: absolute;
+    content: 'Correct answer';
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0,0,0,0.2);
+    padding: 1%;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.wrong-answer {
+    position: relative;
+    background-color: #f8d7da;
+}
+
+.wrong-answer::after {
+    position: absolute;
+    content: 'Your answer';
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0,0,0,0.2);
+    padding: 1%;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.option-correct {
+    position: relative;
+    background-color: #ddd;
+}
+
+.option-correct::after {
+    position: absolute;
+    content: 'Correct answer';
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(0,0,0,0.2);
+    padding: 1%;
+    color: #fff;
+    margin-right: 10px;
+}
+
