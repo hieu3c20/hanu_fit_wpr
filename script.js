@@ -78,6 +78,16 @@ function attemptQuestion() {
           attemptForm.appendChild(attemptLabel);
         });
 
+        let attemptOptions = attemptForm.querySelectorAll(".attempt-option");
+        for (let attemptOption of attemptOptions) {
+          attemptOption.addEventListener("click", (e) => {
+            let attemptSelectedOption = attemptForm.querySelector(".option-selected");
+            if (attemptSelectedOption) {
+              attemptSelectedOption.classList.remove("option-selected");
+            }
+            e.currentTarget.classList.add("option-selected");
+          });
+        }
         attemptQuestionContainer.appendChild(attemptH2);
         attemptQuestionContainer.appendChild(attemptQuestionText);
         attemptQuestionContainer.appendChild(attemptForm);
@@ -87,25 +97,6 @@ function attemptQuestion() {
     });
 }
 
-function handleSelectedOption() {
-  const answers = document.querySelectorAll("#attempt-quiz .attempt-form");
-  for (let answer of answers) {
-    console.log("hey! i call you");
-    let attemptOptions = answer.querySelectorAll(".attempt-option");
-    for (let attemptOption of attemptOptions) {
-      attemptOption.addEventListener("click", (e) => {
-        let attemptSelectedOption = answer.querySelector(".option-selected");
-        if (attemptSelectedOption) {
-          attemptSelectedOption.classList.remove("option-selected");
-        }
-        e.currentTarget.classList.add("option-selected");
-      });
-    }
-  }
-}
-
-
-handleSelectedOption();
 
 attemptQuestion();
 function handleStartQuiz() {

@@ -186,6 +186,9 @@ header {
     margin-bottom: 1px;
 }
 
+.attempt-option:hover {
+    background: #ddd;
+}
 .attempt-option input, .review-option input{
     margin-right: 15px;
 }
