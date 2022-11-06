@@ -26,14 +26,16 @@ const reviewQuizContainer = document.querySelector(".review-quiz-container");
 
 function attemptQuestion() {
   const attemptQuestion = document.querySelector(".attempt-quiz-questions");
-  const APIAttempt = "https://wpr-quiz-api.herokuapp.com/attempts";
-  const takeData = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-  fetch(APIAttempt, takeData)
+  // const APIAttempt = "";
+  // const takeData = {
+ 
+  // };
+  fetch('http://localhost:3000/attempts', {
+    method: "POST"
+    // headers: {
+    //   "Content-Type": "application/json"
+    // }
+  })
     .then((res) => {
       return res.json();
     })
@@ -140,7 +142,6 @@ function handleYesButton() {
     userAnswers: {},
   };
   const attemptForm = document.querySelectorAll(".attempt-form");
-  console.log(attemptForm);
   attemptForm.forEach((answer) => {
     const attemptSelectedAnswer = answer.querySelector(
       'input[type="radio"]:checked'
@@ -161,7 +162,7 @@ function handleYesButton() {
   };
   console.log(JSON.stringify(data));
   fetch(
-    `https://wpr-quiz-api.herokuapp.com/attempts/${attemptId}/submit`,
+    `http://localhost:3000/attempts/${attemptId}/submit`,
     options
   )
     .then((res) => res.json())
